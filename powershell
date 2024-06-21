@@ -1,2 +1,3 @@
 Commands : Get-WinEvent -LogName "Microsoft-Windows-TerminalServices-LocalSessionManager/Operational" -MaxEvents 100 | Where-Object {$_.TimeCreated -ge (Get-Date).AddHours(-24)}
 URLS : netsh trace start capture=yes tracefile=C:\temp\httptrace.etl maxsize=1024 overwrite=yes tracefilemode=circular && timeout /t 86400 && netsh trace stop
+Connections : netstat -nab -p TCP | findstr /C:"ESTABLISHED" /C:"LISTENING" /C:"TIME_WAIT" /C:"CLOSE_WAIT" | findstr /V /C:"127.0.0.1" /C:"[::1]"
