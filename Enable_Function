@@ -1,0 +1,6 @@
+(function() {
+    var elements = document.querySelectorAll('input:disabled, select:disabled, button:disabled');
+    elements.forEach(function(element) {
+        element.disabled = false;
+    });
+})();
