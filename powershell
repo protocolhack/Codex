@@ -2,3 +2,6 @@ Commands : Get-WinEvent -LogName "Microsoft-Windows-TerminalServices-LocalSessio
 URLS : netsh trace start capture=yes tracefile=C:\temp\httptrace.etl maxsize=1024 overwrite=yes tracefilemode=circular && timeout /t 86400 && netsh trace stop
 Connections : netstat -nab -p TCP | findstr /C:"ESTABLISHED" /C:"LISTENING" /C:"TIME_WAIT" /C:"CLOSE_WAIT" | findstr /V /C:"127.0.0.1" /C:"[::1]"
 User Log : Get-WinEvent -LogName Security -FilterXPath "*[System[(EventID=4624) and TimeCreated[timediff(@SystemTime) <= 86400000]]]" | Format-List TimeCreated, Message
+
+
+https://learn.cisecurity.org/e/799323/l-799323-2019-11-15-3v7x/2mnnf/2418889501/h/OUeB2pEC6_IJZRJH1taeqIbdNyObvn4N85gRhD262vU
