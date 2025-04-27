@@ -5,3 +5,5 @@ User Log : Get-WinEvent -LogName Security -FilterXPath "*[System[(EventID=4624) 
 
 
 https://learn.cisecurity.org/e/799323/l-799323-2019-11-15-3v7x/2mnnf/2418889501/h/OUeB2pEC6_IJZRJH1taeqIbdNyObvn4N85gRhD262vU
+
+https://drive.google.com/file/d/16fi5JpKq0nT2_7mxvdHmcDR-RjqJLWVn/view?usp=sharing
